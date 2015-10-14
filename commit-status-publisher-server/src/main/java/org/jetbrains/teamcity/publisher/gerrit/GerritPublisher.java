@@ -65,7 +65,7 @@ public class GerritPublisher extends BaseCommitStatusPublisher {
     try {
       JSch jsch = new JSch();
       addKeys(jsch, project);
-      session = jsch.getSession(getUsername(), getGerritServer(), 29418);
+      session = jsch.getSession(getUsername(), getGerritServer(), 3004);
       session.setConfig("StrictHostKeyChecking", "no");
       session.connect();
       channel = (ChannelExec) session.openChannel("exec");
